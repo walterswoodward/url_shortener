@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html ng-app="shortUrlApp">
-  <!-- ng-app here instantiates the shortUrlApp Angular App -->
+  <!-- ng-app here instantiates the shortUrlApp Angular App. Now everything from shortUrlApp is available to everything inside the HTML tag-->
   <head> 
       <link rel="stylesheet" href="styles.css">
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -18,9 +18,9 @@
     </header>
     <!-- Notice controller here from app.js -->
     <div class="main" ng-controller='shortAppCtrl'>
-      {{urlToShorten}}
       <input placeholder="Enter URL" ng-model="urlToShorten"/>
-      <button>Post</button>
+      <!-- Above here ng-model is variable sent from the Angular App -->
+      <a class="post_button" ng-href="/new/{{urlToShorten}}">Post</a class="button">
     </div>
   </body>
 </html>
