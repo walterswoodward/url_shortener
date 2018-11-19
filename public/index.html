@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+  <head> 
+      <link rel="stylesheet" href="styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h3>URL Shortener Microservice</h3>
+      <h4>
+        <a href="https://www.freecodecamp.com" target="_blank"
+          >freeCodeCamp: API and Microservice</a
+        >
+      </h4>
+    </header>
+    <div class="main">
+      {{test}}
+      <input placeholder="Enter URL" ng-model="urlToShorten"/>
+      <button>Post</button>
+    </div>
+  </body>
+</html>
