@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const urlSchema = new Schema({
   originalUrl: String,
   shortUrl: String,
+  newUrl: String,
 }, {timestamps: true});
 
 // `shortUrl` is the collection/table

@@ -53,6 +53,20 @@ server.get("/new/:urlToShorten(*)", (req, res, next) => {
   }
 });
 
+// Query database and forward to originalURL:
+server.get('/:urlToForward', (req,res,next)=>{
+  // store value of urlToForward
+var shorterUrl = req.params.urlToForward;
+shortUrl.findOne({'shortUrl': shorterUrl}, (err, data)=>{
+  if(err){
+    res.send('Error reading database');
+  } else {
+    res.redirect(301, data.originalUrl)
+  }
+
+})
+})
+
 // Listen to see if everything is working
 server.listen(process.env.port || 3000, () => {
   console.log("Everything is working");

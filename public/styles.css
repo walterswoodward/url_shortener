@@ -15,3 +15,8 @@ body {
 cursor: pointer;
 background: grey
 }
+
+.list_item {
+  list-style-type: none;
+
+}
