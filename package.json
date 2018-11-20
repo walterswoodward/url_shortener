@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startwithproxy": "\"ng serve --proxy-config proxy.conf.json\""
   },
   "author": "",
   "license": "ISC",
